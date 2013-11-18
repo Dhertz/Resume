@@ -30,3 +30,6 @@
 *.vrb
 *.xdy
 *.tdo
+.textpadtmp
+contact.sty
+*.pdf
