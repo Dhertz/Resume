@@ -246,10 +246,11 @@
     % do nothing
   }{%
     \leavevmode\hbox to \textwidth
-      {\hfill\vbox{\hbox{\@addressone}
-		   \hbox{\@addresstwo}
-		  }%
-      }\par
+      {\hfill\vbox{\hbox{\@addressone}}}
+    \par
+    \leavevmode\hbox to \textwidth
+    {\hfill\vbox{\hbox{\@addresstwo}}}
+    \par
   }
 \endgroup}
 

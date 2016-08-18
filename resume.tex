@@ -3,97 +3,106 @@
 \usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 \usepackage[none]{hyphenat}
 \usepackage{contact}
+\usepackage{enumitem}
 \voffset -20pt
 \textheight = 760pt
+\newcommand\oindent{0em}
+\newcommand\lindent{1.5em}
+\newcommand\spacing{0.6em}
+\newcommand\si{\item[]}
+\newenvironment{secretlist}[1]{\begin{itemize}[noitemsep,leftmargin=#1,nolistsep]}{\end{itemize}}
 
-\newenvironment{myindentpar}[1]
- {\begin{list}{}
-         {\setlength{\leftmargin}{#1}}
-         \item[]
- }
- {\end{list}}
 \begin{document}
+    \name{Daniel Hertz}
+    % \address used twice to have two lines of address
+    % Hide my contact info from evil recruiters
+    \address{\addr}
+    \address{\email / \phone}
 
-\name{Daniel Hertz}
-% \address used twice to have two lines of address
-% Hide my contact info from evil recruiters
-\address{\addr}
-\address{\email / \phone}
- 
-\begin{resume}
- 
-\section{COMPUTING SKILLS}       
-\textbf{Languages:} Java, Haskell, SQL, IA-32/ARM assembly, C, C++, Perl, Python, Ruby. \\
-\textbf{Web Technologies:} HTML 5, Javascript, CouchDB, Rails, JSP, Perl-CGI, PostgreSQL, CSS3. \\
-\textbf{Operating Systems:} Windows XP/7/8, OS X 10.5+, Linux (Various distributions). \\
-\textbf{Graphics:} Adobe Photoshop/Illustrator CS2 and above, Pixelmator 2.0. \\
-\textbf{Other Software/Skills:} \LaTeX , Eclipse IDE, Android ADT, git, Perforce, POSIX shell. 
-\section{EDUCATION} 
-\textbf{Bachelor of Engineering}, Computing \\
-                Imperial College London \\
-                2011 - 2014 (Expected). \\
-                Received a First for years 1 \& 2.   
- 
-\section{EXPERIENCE}
-                \textbf{Video Encoding Intern} \hfill Summer 2013 \\
-                 Akamai Technologies, San Diego, CA
-                 \begin{myindentpar}{1cm}
-                 Ensured reliability in a distributed data store using python and CouchDB as well as investigated new features for the transcoding product.
-                 \end{myindentpar}
-                 
-                 \textbf{Pebble Watchfaces} \hfill Easter Break, 2012 \\
-                 For Pebble's beta SDK
-                \begin{myindentpar}{1cm}
-				    Produced embedded apps for the most popular smartwatch using the C based sdk.     
-			   \end{myindentpar}
+    \begin{resume}
+        \section{EXPERIENCE}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Software Engineer} \hfill Summer 2014 - Present
+                \si Akamai Technologies, Cambridge, MA/London, UK (Remote)
+                \si Python, SQL, Java, Perl, Javascript
+                \begin{secretlist}{\lindent}
+                    \si Owned and maintained mission critical legacy applications, enabling new software to be distributed globally to 200,000+ machines.
+                    \si Collaborated with senior engineers on projects involving management of software versions and states across all machines.
+                    \si Created new tracking application in response to internal customer need for more visibility into systems.
+                    \si Maintained multiple applications in various programming languages.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{\spacing}
+            \begin{secretlist}{\oindent}
+                \si \textbf{AkaPi - Digital Noticeboard Project} \hfill 2015 - Present
+                \si For Raspberry Pi \& Adafruit Display Modules --- Nim, C++, Python
+                \begin{secretlist}{\lindent}
+                    \si Made digital noticeboard for office announcements using panels similar to ones used in outside advertisements (such as in Times Square). Aggregates data from APIs such as Twitter and forcast.io to display weather infomation, internal traffic statistics, stock performance, upcoming bus and train times and cute animations.
+                    \si This project also required multiple contributions to the open source language Nim, as a result of its relative immaturity.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{\spacing}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Maypole - A Collaborative Video Creator} \hfill 2014
+                \si Final Year Project, Imperial College, London --- Objective-C, Python
+                \begin{secretlist}{\lindent}
+                    \si Created iPhone application to produce a crowd-sourced video of any event, using multiple video streams from different devices.
+                    \si The application utilised a distributed back end system, based in Amazon Web Services, to sync timestamps and audio and create a single video from the multiple sources.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{\spacing}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Video Encoding Intern} \hfill Summer 2013
+                \si Akamai Technologies, San Diego, CA --- Python, Javascript
+                \begin{secretlist}{\lindent}
+                    \si Ensured reliability in a distributed data store using CouchDB.
+                    \si Investigated and produced a report on new features for the transcoding product.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{\spacing}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Pebble Watchfaces} \hfill Spring 2012
+                \si For Pebble's beta SDK --- C, Javascript, HTML
+                \begin{secretlist}{\lindent}
+                    \si Produced embedded apps for the most popular smartwatch at the time using the C-based SDK. Users installed the applications over 4000 times.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{\spacing}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Software Intern} \hfill Summer 2012
+                \si Akamai Technologies, Cambridge, MA --- Java, Perl
+                \begin{secretlist}{\lindent}
+                    \si Improved several internal web-applications for managing (at the time) 100,000+ machines.
+                \end{secretlist}
+            \end{secretlist}
+            \vspace{0.6em}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Youth Worker} \hfill 2009 - 2014
+                \si Kew Youth Club, West London, UK
+                \begin{secretlist}{\lindent}
+                    \si Worked to provide a supervised space for 12 - 15 year olds to come and socialise.
+                \end{secretlist}
+            \end{secretlist}
 
-                \textbf{PintOS Operating System} \hfill Spring Term, 2013 \\
-                 Operating Systems Course, C
-                \begin{myindentpar}{1cm}
-				     Extended a simple OS created by Stanford for education with multi-threading, user programs and virtual memory.			    \end{myindentpar}
-				
-				\textbf{Little Printer Publications} \hfill Winter Break, 2012 \\
-                 For Berg Cloud's Application Platform
-                \begin{myindentpar}{1cm}
-				    Ruby and Sinatra based web applications using Berg, Twitter, Google and Tumblr APIs.     
-			   \end{myindentpar}
+        \section{EDUCATION}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Bachelor of Engineering}, Computing
+                \si First Class Honours, 2014
+                \si Imperial College London
+            \end{secretlist}
 
-                 \textbf{MAlice Compiler} \hfill Winter Term, 2012 \\
-                 Compilers Course, C++
-                \begin{myindentpar}{1cm}
-				     Built a fully functioning complier for a fictional C-like language from scratch with ANTLR. The project compiled the language down to ARMv6 assembly to run on a Raspberry Pi, with GPIO support for simple hardware peripherals.			    \end{myindentpar}
- 
-				\textbf{Software Intern} \hfill Summer 2012 \\
-                 Akamai Technologies, Cambridge, MA
-                \begin{myindentpar}{1cm}
-				     Working on improving several internal web-apps for managing their 100,000+ servers, using both JSP and Perl-CGI.
-			    \end{myindentpar}
- 
-                \textbf{Youth Worker} \hfill 2009 - Present \\
-                Kew Youth Club, West London, UK
-                \begin{myindentpar}{1cm}
-                Working with 12 - 15 year olds on Friday evenings.
-                \end{myindentpar}
-				
-				\textbf{Intern} \hfill Summer 2010 \\
-                 nVIDIA, London, UK
-                 \begin{myindentpar}{1cm}
-                 Fixing and testing prototype 3D demonstration hardware and software.
-                 \end{myindentpar}
+        \section{SEMI-RELEVANT PERSONAL INFO}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Dual Citizen}, United States of America and the United Kingdom
+                \si \textbf{Founder and President 2013-2014}, Imperial College London LEGO Society
+                \si \textbf{Founder}, Pirate Party UK, a political party registered in the United Kingdom to fight to protect citizens' digital rights
+            \end{secretlist}
 
-               
-\section{HONOURS, AWARDS, MEMBERSHIPS} 
-				\textbf{Dual Citizen}, United States of America and the United Kingdom \\
-				\textbf{Honourable Mention}, 2nd year group web apps project \\
-				\textbf{Electrical and Control Team}, Imperial College's Racing Green EV2, a hybrid racecar \\
-				\textbf{Founder and President 2013-2014}, Imperial College London LEGO Society \\
-                \textbf{Founder}, Pirate Party UK, a political party registered in the United Kingdom to fight to protect citizens' digital rights 
-\end{resume}
+        \section{BUZZWORD SOUP}
+            \begin{secretlist}{\oindent}
+                \si \textbf{Languages:} Bash/Sh, CSS, HTML, Javascript, Python, Java, Perl, SQL.
+                \si \textbf{Operating Systems:} macOS, Ubuntu (Linux).
+                \si \textbf{Other Software/Skills:} git, intelliJ, JIRA, \LaTeX, GNU Make, Perforce, POSIX shell, PosgreSQL, Vim.
+            \end{secretlist}
+    \end{resume}
 \end{document}
-
-
-
-
-
-
-
